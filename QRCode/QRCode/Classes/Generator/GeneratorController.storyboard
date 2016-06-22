@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LPB-zL-nnC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Generator View Controller-->
+        <scene sceneID="UJh-GX-6NR">
+            <objects>
+                <viewController id="LPB-zL-nnC" customClass="GeneratorViewController" customModule="QRCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Xi-7r-R3v"/>
+                        <viewControllerLayoutGuide type="bottom" id="czi-bg-cq0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LTh-wZ-unD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_picture" translatesAutoresizingMaskIntoConstraints="NO" id="UJA-A1-zUV">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5nY-eQ-ixj"/>
+                                    <constraint firstAttribute="width" secondItem="UJA-A1-zUV" secondAttribute="height" multiplier="1:1" id="g9L-JO-x6G"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uYz-tT-iCt">
+                                <rect key="frame" x="67" y="100" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Aw-Le-fVD">
+                                <rect key="frame" x="232" y="157" width="75" height="30"/>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="generateBtnClick" destination="LPB-zL-nnC" eventType="touchUpInside" id="jkL-Ok-MBO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Aw-Le-fVD" firstAttribute="top" secondItem="uYz-tT-iCt" secondAttribute="bottom" constant="27" id="A9n-vy-5vd"/>
+                            <constraint firstItem="uYz-tT-iCt" firstAttribute="width" secondItem="UJA-A1-zUV" secondAttribute="width" id="EX1-b7-1c1"/>
+                            <constraint firstItem="6Aw-Le-fVD" firstAttribute="trailing" secondItem="UJA-A1-zUV" secondAttribute="trailing" id="QP3-oS-rxc"/>
+                            <constraint firstItem="uYz-tT-iCt" firstAttribute="top" secondItem="1Xi-7r-R3v" secondAttribute="bottom" constant="36" id="Ral-UG-Mn5"/>
+                            <constraint firstItem="UJA-A1-zUV" firstAttribute="centerX" secondItem="LTh-wZ-unD" secondAttribute="centerX" id="fgP-bE-3HD"/>
+                            <constraint firstItem="UJA-A1-zUV" firstAttribute="centerY" secondItem="LTh-wZ-unD" secondAttribute="centerY" id="iUS-2p-A7C"/>
+                            <constraint firstItem="uYz-tT-iCt" firstAttribute="centerX" secondItem="LTh-wZ-unD" secondAttribute="centerX" id="yaC-SX-77T"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="UJA-A1-zUV" id="lqA-3A-BqD"/>
+                        <outlet property="textFiled" destination="uYz-tT-iCt" id="f9v-V0-uHI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eji-Y4-avF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630.5" y="-507.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="empty_picture" width="100" height="100"/>
+    </resources>
+</document>
